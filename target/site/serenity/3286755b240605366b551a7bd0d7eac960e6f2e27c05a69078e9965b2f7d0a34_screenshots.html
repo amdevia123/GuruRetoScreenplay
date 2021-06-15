@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="eec53da622f656b745456f4d6499ead3a8e63aa799623fef0464cb0fa9e41e67.html">Hago Un Registro</a></span>
+                > <span class="truncate-60"><a
+                    href="3286755b240605366b551a7bd0d7eac960e6f2e27c05a69078e9965b2f7d0a34.html">Registrar y validar registro </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 10-06-2021 21:44</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Hago Un Registro </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                Este feature se trata de realizar un registro y validar luego ese registro en Guru
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='far fa-stop-circle pending-icon fa-2x' title='PENDING'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="pending-color">Registrar y validar registro
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="38b792cd634b8bf44cbc7000f1a958e3d8833abf1f2c4c7a5aa333ff60ca27ab.png" title=" Given that andres enters the Guru page" width="1034"/>
+                <img src="38b792cd634b8bf44cbc7000f1a958e3d8833abf1f2c4c7a5aa333ff60ca27ab.png" title=" Andres opens the browser on Google Home Page" width="1034"/>
+                <img src="38b792cd634b8bf44cbc7000f1a958e3d8833abf1f2c4c7a5aa333ff60ca27ab.png" title=" Andres opens the Guru home page" width="1034"/>
+                <img src="38b792cd634b8bf44cbc7000f1a958e3d8833abf1f2c4c7a5aa333ff60ca27ab.png" title=" Andres opens the browser on Google Home Page (completed)" width="1034"/>
+                <img src="38b792cd634b8bf44cbc7000f1a958e3d8833abf1f2c4c7a5aa333ff60ca27ab.png" title=" Given that andres enters the Guru page (completed)" width="1034"/>
+                <img src="072e9d60e9c67b2f7ca6800fa435e87f8005b2017adc68413c876ca4c7358e4c.png" title=" When andres signs up Andres, Devia, 123, andres12377@gmail.com, Avenida Siempre Viva 123, Medellin, Antioquia, 00000, andres12377@gmail.com, 123456, 123456" width="1034"/>
+                <img src="072e9d60e9c67b2f7ca6800fa435e87f8005b2017adc68413c876ca4c7358e4c.png" title=" Andres register in" width="1034"/>
+                <img src="072e9d60e9c67b2f7ca6800fa435e87f8005b2017adc68413c876ca4c7358e4c.png" title=" Andres clicks on Register Button" width="1034"/>
+                <img src="072e9d60e9c67b2f7ca6800fa435e87f8005b2017adc68413c876ca4c7358e4c.png" title=" Andres enters 'Andres' into Name Box" width="1034"/>
+                <img src="4c32a1ee966363a63df2a3316255fbbc48a3d7a42a20f748588f7ba6df28e2d8.png" title=" Andres enters 'Andres' into Name Box (completed)" width="1034"/>
+                <img src="4c32a1ee966363a63df2a3316255fbbc48a3d7a42a20f748588f7ba6df28e2d8.png" title=" Andres enters 'Devia' into Lastname Box" width="1034"/>
+                <img src="c7527dd9503acab053a529b949b2cec4796666619685474b468f5102a778d5d8.png" title=" Andres enters 'Devia' into Lastname Box (completed)" width="1034"/>
+                <img src="c7527dd9503acab053a529b949b2cec4796666619685474b468f5102a778d5d8.png" title=" Andres enters '123' into Phone Box" width="1034"/>
+                <img src="836eddf561af4da856c96113577e22e428589690458dc77ab530d1bfb935eb1d.png" title=" Andres enters '123' into Phone Box (completed)" width="1034"/>
+                <img src="836eddf561af4da856c96113577e22e428589690458dc77ab530d1bfb935eb1d.png" title=" Andres enters 'andres12377@gmail.com' into Email Box" width="1034"/>
+                <img src="aaba5b9f52097c849c6119fee4c7f4bd56aa8dbe9560e30894214c7de2e3554a.png" title=" Andres enters 'andres12377@gmail.com' into Email Box (completed)" width="1034"/>
+                <img src="aaba5b9f52097c849c6119fee4c7f4bd56aa8dbe9560e30894214c7de2e3554a.png" title=" Andres enters 'Avenida Siempre Viva 123' into Address Box" width="1034"/>
+                <img src="df6f56744f1c0648838e8f174578f453e15019eba5de1d88e3a155952f3f5e59.png" title=" Andres enters 'Avenida Siempre Viva 123' into Address Box (completed)" width="1034"/>
+                <img src="df6f56744f1c0648838e8f174578f453e15019eba5de1d88e3a155952f3f5e59.png" title=" Andres enters 'Medellin' into City Box" width="1034"/>
+                <img src="a08a41450d7be6e110c614bd80ceafcb1fc4cee69d2866f2611ff37a67f0aa38.png" title=" Andres enters 'Medellin' into City Box (completed)" width="1034"/>
+                <img src="a08a41450d7be6e110c614bd80ceafcb1fc4cee69d2866f2611ff37a67f0aa38.png" title=" Andres enters 'Antioquia' into Department Box" width="1034"/>
+                <img src="89008c4c20a3c2334e46e8c9695d42dd09cc080a1bda55e963eec991a0b0c516.png" title=" Andres enters 'Antioquia' into Department Box (completed)" width="1034"/>
+                <img src="89008c4c20a3c2334e46e8c9695d42dd09cc080a1bda55e963eec991a0b0c516.png" title=" Andres enters '00000' into Postal Code Box" width="1034"/>
+                <img src="69bfb8ec462ce8816145113a8f1b5eb37a4e111b65bf902749a59592f46ff657.png" title=" Andres enters '00000' into Postal Code Box (completed)" width="1034"/>
+                <img src="69bfb8ec462ce8816145113a8f1b5eb37a4e111b65bf902749a59592f46ff657.png" title=" Andres enters 'andres12377@gmail.com' into User Box" width="1034"/>
+                <img src="8ac693764be95e59c0c1ae41171b8a5849ae838767064069be6dd31dca311ca8.png" title=" Andres enters 'andres12377@gmail.com' into User Box (completed)" width="1034"/>
+                <img src="8ac693764be95e59c0c1ae41171b8a5849ae838767064069be6dd31dca311ca8.png" title=" Andres enters '123456' into Passwd Box" width="1034"/>
+                <img src="43c6daac0d6ddad6de8a36c7f7ffab28857cdde21da390d3cf45c9a822f8c402.png" title=" Andres enters '123456' into Passwd Box (completed)" width="1034"/>
+                <img src="43c6daac0d6ddad6de8a36c7f7ffab28857cdde21da390d3cf45c9a822f8c402.png" title=" Andres enters '123456' into Conf Passwd Box" width="1034"/>
+                <img src="7b937d04527762695523d7168b2765060e5a817f6f369657660d7c4de3b6b9d8.png" title=" Andres enters '123456' into Conf Passwd Box (completed)" width="1034"/>
+                <img src="7b937d04527762695523d7168b2765060e5a817f6f369657660d7c4de3b6b9d8.png" title=" Andres clicks on Finish Register Button" width="1034"/>
+                <img src="9d53247d1e70c076f2403dd0c7f5e8149688a77918d1fd8bc216d0474c074cdd.png" title=" Andres clicks on Finish Register Button (completed)" width="1034"/>
+                <img src="9d53247d1e70c076f2403dd0c7f5e8149688a77918d1fd8bc216d0474c074cdd.png" title=" Andres register in (completed)" width="1034"/>
+                <img src="9d53247d1e70c076f2403dd0c7f5e8149688a77918d1fd8bc216d0474c074cdd.png" title=" When andres signs up Andres, Devia, 123, andres12377@gmail.com, Avenida Siempre Viva 123, Medellin, Antioquia, 00000, andres12377@gmail.com, 123456, 123456 (completed)" width="1034"/>
+                <img src="9d53247d1e70c076f2403dd0c7f5e8149688a77918d1fd8bc216d0474c074cdd.png" title=" And logs in andres12377@gmail.com, 123456: <span class='pending-color'>PENDING</span>" width="1034"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.0</span>
+</div>
+</body>
+</html>

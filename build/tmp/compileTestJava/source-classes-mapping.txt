@@ -1,0 +1,4 @@
+gurusuite/runners/GoogleTranslateRunner.java
+ gurusuite.runners.GoogleTranslateRunner
+gurusuite/stepdefinitions/GuruStepDefinition.java
+ gurusuite.stepdefinitions.GuruStepDefinition

@@ -1,0 +1,18 @@
+gurusuite/userinterfaces/GuruRegisterCompletePage.java
+ gurusuite.userinterfaces.GuruRegisterCompletePage
+gurusuite/userinterfaces/GuruHomePage.java
+ gurusuite.userinterfaces.GuruHomePage
+gurusuite/userinterfaces/GuruRegisterPage.java
+ gurusuite.userinterfaces.GuruRegisterPage
+gurusuite/userinterfaces/GuruLogInComplete.java
+ gurusuite.userinterfaces.GuruLogInComplete
+gurusuite/tasks/RegisterIn.java
+ gurusuite.tasks.RegisterIn
+gurusuite/tasks/OpenTheBrowser.java
+ gurusuite.tasks.OpenTheBrowser
+gurusuite/tasks/ConfirmTheBannerOn.java
+ gurusuite.tasks.ConfirmTheBannerOn
+gurusuite/models/Data.java
+ gurusuite.models.Data
+gurusuite/tasks/LogIn.java
+ gurusuite.tasks.LogIn
